@@ -1,0 +1,258 @@
+:root {
+  --verde: #1db954;
+  --negro: #111;
+  --blanco: #e4d8d8;
+}
+
+body {
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* Para que se mantenga al hacer scroll */
+  background-position: center;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.35);  /* negro con opacidad del 85% */
+  border-bottom: 1px solid var(--verde);  /* Línea divisoria */
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(4px);  /* opcional: efecto de vidrio */
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 10);  /* sombra inferior */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled nav a,
+header.scrolled .logo span {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--verde);
+}
+
+#hero {
+  background-image: url('sonrisa.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--blanco);
+  text-align: center;
+  padding: 9rem 2rem;
+  
+
+  position: relative;
+  max-width: none;
+  margin: 0;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);  /* oscurece ligeramente */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .btn-turno {
+  background-color: transparent;
+  color: var(--blanco);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+
+  transform: translateY(10px);
+  position: relative;
+  transition: transform 0.3s ease;
+  top: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .btn-turno:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--blanco);
+  border-color: #ffffff7c;
+}
+
+
+section:not(#hero) {
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--verde);
+  display: inline-block;   /* clave para que la línea se ajuste al texto */
+  padding-bottom: 0.3rem;
+}
+
+#equipo {
+  text-align: center;
+}
+
+
+#tratamientos {
+  margin-top: 9rem;
+  text-align: center;
+}
+
+
+ul {
+  padding-left: 1.5rem;
+}
+
+footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.whatsapp-float {
+  animation: bounce 2s infinite;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;   /* Cambiá si el fondo no es oscuro */
+}
+
+.fondo-esmerilado {
+  background: rgba(255, 255, 255, 0.2);   /* color con opacidad */
+  backdrop-filter: blur(1px);   /* desenfoque */
+  -webkit-backdrop-filter: blur(10px);   /* soporte para Safari */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
