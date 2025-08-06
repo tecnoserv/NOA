@@ -287,3 +287,66 @@ footer {
   margin-bottom: 2rem;
 
 }
+
+
+/* Centrar y limitar el ancho general del contenido */
+main, section:not(#hero) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Ajustar el hero para que siempre mantenga proporción y se vea bien */
+#hero {
+  height: 90vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+/* Ajustes de header para que no se superponga en pantallas chicas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .logo {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .logo span {
+    font-size: 1.1rem;
+  }
+
+  #hero {
+    height: auto;
+    padding: 5rem 1rem;
+    border-radius: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+
