@@ -156,11 +156,11 @@ img {
   display: block;
 }
 
-main, section:not(#hero) {
+/* main, section:not(#hero) {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-}
+}*/
 
 section h2 {
   font-size: 2rem;
@@ -302,6 +302,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
