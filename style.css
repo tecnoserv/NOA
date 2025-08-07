@@ -102,7 +102,7 @@ nav a:hover {
   width: 100%;
 }
 
-/*#hero::before {
+#hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -111,7 +111,12 @@ nav a:hover {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
-}*/
+}
+
+.hero-content { 
+  position: relative;
+  z-ndex: 1;
+}
 
 .hero-content h1 {
   font-size: 3rem;
@@ -311,6 +316,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
