@@ -247,7 +247,7 @@ footer {
 /* MOBILE FIRST OPTIMIZACIÓN */
 @media (max-width: 768px) {
   body {
-    background-attachment: fixed;
+    background-attachment: scroll !important;
     padding-top: 80px; 
   }
 
@@ -314,6 +314,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
