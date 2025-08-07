@@ -113,14 +113,10 @@ nav a:hover {
   z-index: 0;
 }
 
-.hero-content {
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
-}
+ .hero-content h1 {
+    font-size: 2rem;
+  }
+
 
 
 .hero-content h1 {
@@ -312,6 +308,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
