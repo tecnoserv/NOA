@@ -248,7 +248,7 @@ footer {
 @media (max-width: 768px) {
   body {
     background-attachment: fixed;
-    padding.top: 80px; 
+    padding-top: 80px; 
   }
 
   header {
@@ -314,6 +314,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
