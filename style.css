@@ -91,7 +91,6 @@ nav a:hover {
   text-align: center;
   padding: 9rem 2rem;
   position: relative;
-  max-width: 1200px;
   margin: 0;
   height: 90vh;
   border-radius: 0;
@@ -302,6 +301,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
