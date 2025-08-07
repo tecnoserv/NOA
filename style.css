@@ -248,7 +248,7 @@ footer {
 @media (max-width: 768px) {
   body {
     background-attachment: scroll !important;
-    padding-top: 80px; 
+   
   }
 
   header {
