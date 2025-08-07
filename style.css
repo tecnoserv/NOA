@@ -150,6 +150,10 @@ nav a:hover {
   border-color: #ffffff7c;
 }
 
+.separador {
+  margin-bottom: 4rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -316,6 +320,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
