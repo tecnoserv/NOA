@@ -190,6 +190,13 @@ ul {
 }
 
 footer {
+  background: rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(4px); 
+
+  -webkit-backdrop-filter: blur(4px);
+  /* compatibilidad con Safari */
+
   background-color: var(--negro);
   color: var(--blanco);
   text-align: center;
