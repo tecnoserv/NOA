@@ -288,7 +288,7 @@ footer {
     height: auto;
     padding: 5rem 1rem;
     border-radius: 0;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
