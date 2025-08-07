@@ -30,7 +30,8 @@ header {
   backdrop-filter: blur(4px);
 
   
-  margin: 0 auto;
+  width: 100%;
+
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -89,7 +90,7 @@ nav a:hover {
   background-repeat: no-repeat;
   color: var(--blanco);
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   position: relative;
   margin: 0;
   height: 100%;
@@ -301,6 +302,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
