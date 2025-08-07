@@ -114,8 +114,10 @@ nav a:hover {
 }
 
 .hero-content {
+  text-align: center;
   position: relative;
   z-index: 1;
+  margin: 0;  /* asegurate de que no haya margin-top accidental */
 }
 
 .hero-content h1 {
@@ -307,6 +309,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
