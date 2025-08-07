@@ -113,12 +113,6 @@ nav a:hover {
   z-index: 0;
 }
 
- .hero-content h1 {
-    font-size: 2rem;
-  }
-
-
-
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -317,6 +311,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
