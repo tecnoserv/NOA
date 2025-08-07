@@ -1,22 +1,24 @@
+/* VARIABLES */
 :root {
   --verde: #1db954;
   --negro: #111;
   --blanco: #e4d8d8;
 }
 
+/* ESTILOS BASE */
 body {
   background-image: url('fondo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;  /* Para que se mantenga al hacer scroll */
+  background-attachment: fixed;
   background-position: center;
   position: relative;
   font-family: 'Raleway', sans-serif;
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.35);  /* negro con opacidad del 85% */
-  border-bottom: 1px solid var(--verde);  /* Línea divisoria */
+  background-color: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid var(--verde);
   color: var(--blanco);
   padding: 1rem 2rem;
   display: flex;
@@ -25,25 +27,36 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(4px);  /* opcional: efecto de vidrio */
+  backdrop-filter: blur(4px);
 }
 
 header.scrolled {
   background-color: rgba(0, 0, 0, 0.65);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 10);  /* sombra inferior */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 10);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header.scrolled nav a,
 header.scrolled .logo span {
-  color: rgb(255, 255, 255);
+  color: #fff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-
 .logo {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: white;
 }
 
 nav ul {
@@ -63,6 +76,7 @@ nav a:hover {
   color: var(--verde);
 }
 
+/* HERO */
 #hero {
   background-image: url('sonrisa.png');
   background-size: cover;
@@ -71,93 +85,16 @@ nav a:hover {
   color: var(--blanco);
   text-align: center;
   padding: 9rem 2rem;
-  
-
   position: relative;
-  max-width: none;
-  margin: 0;
-
-
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90vh;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
-
-@media (max-width: 768px) {
-  /* 1. Evitar scroll trabado */
-  body {
-    background-attachment: scroll !important;
-  }
-
-  /* 2. Header simplificado para móviles */
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1rem;
-    backdrop-filter: none;
-    background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: none;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-
-  .logo {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-
-  .logo span {
-    font-size: 1.1rem;
-  }
-
-  /* 3. Hero corregido */
-  #hero {
-    height: auto;
-    padding: 5rem 1rem;
-    border-radius: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .hero-content .btn-turno {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.95rem;
-    margin-top: 1rem;
-  }
-
-  .fondo-esmerilado {
-    padding: 1rem;
-  }
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 #hero::before {
   content: "";
@@ -166,7 +103,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);  /* oscurece ligeramente */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
@@ -196,44 +133,45 @@ img {
   border-radius: 8px;
   text-decoration: none;
   display: inline-block;
-
   transform: translateY(10px);
   position: relative;
-  transition: transform 0.3s ease;
   top: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content .btn-turno:hover {
   background-color: rgba(255, 255, 255, 0.15);
-  color: var(--blanco);
   border-color: #ffffff7c;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-section:not(#hero) {
-  max-width: 1000px;
-  margin: auto;
+main, section:not(#hero) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--verde);
-  display: inline-block;   /* clave para que la línea se ajuste al texto */
+  display: inline-block;
   padding-bottom: 0.3rem;
 }
-
-#equipo {
-  text-align: center;
-}
-
 
 #tratamientos {
   margin-top: 9rem;
   text-align: center;
 }
 
+#equipo {
+  text-align: center;
+}
 
 ul {
   padding-left: 1.5rem;
@@ -246,6 +184,7 @@ footer {
   padding: 1rem;
 }
 
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -260,6 +199,7 @@ footer {
   justify-content: center;
   z-index: 1000;
   transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
 }
 
 .whatsapp-float:hover {
@@ -273,72 +213,39 @@ footer {
 }
 
 @keyframes bounce {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-8px);
   }
 }
 
-.whatsapp-float {
-  animation: bounce 2s infinite;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 50px;
-  width: auto;
-}
-
-.logo span {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;   /* Cambiá si el fondo no es oscuro */
-}
-
+/* BLOQUE ESPECIAL VIDRIO */
 .fondo-esmerilado {
-  background: rgba(255, 255, 255, 0.2);   /* color con opacidad */
-  backdrop-filter: blur(1px);   /* desenfoque */
-  -webkit-backdrop-filter: blur(10px);   /* soporte para Safari */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-
 }
 
-
-/* Centrar y limitar el ancho general del contenido */
-main, section:not(#hero) {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Ajustar el hero para que siempre mantenga proporción y se vea bien */
-#hero {
-  height: 90vh;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 12px;
-}
-
-/* Ajustes de header para que no se superponga en pantallas chicas */
+/* 📱 MOBILE FIRST OPTIMIZACIÓN */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+  }
+
   header {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 1rem;
+    padding: 1rem;
+    backdrop-filter: none;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: none;
   }
 
   nav ul {
@@ -366,6 +273,9 @@ main, section:not(#hero) {
     height: auto;
     padding: 5rem 1rem;
     border-radius: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .hero-content h1 {
@@ -375,7 +285,19 @@ main, section:not(#hero) {
   .hero-content p {
     font-size: 1.1rem;
   }
+
+  .hero-content .btn-turno {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .fondo-esmerilado {
+    padding: 1rem;
+  }
 }
+
+
 
 
 
