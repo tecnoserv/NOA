@@ -249,12 +249,6 @@ footer {
 
 /* MOBILE FIRST OPTIMIZACIÓN */
 @media (max-width: 768px) {
-  [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-
   body {
     background-attachment: scroll !important;
    
