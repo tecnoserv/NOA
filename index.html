@@ -66,13 +66,16 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="main.js"></script>
-  <script>
+<script src="main.js"></script>
+<script>
+  if (window.innerWidth > 768) {
     AOS.init({
-     duration: 1000, // duración de la animación en milisegundos
-   
+      duration: 1000 // duración de la animación en milisegundos
     });
+  }
+</script>
      
+
   </script>
   <!-- WhatsApp flotante -->
   <a href="https://wa.me/5492235289252" class="whatsapp-float" target="_blank" rel="noopener"
