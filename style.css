@@ -86,7 +86,7 @@ nav a:hover {
 #hero {
   background-image: url('sonrisa.png');
   
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   color: var(--blanco);
   text-align: center;
@@ -325,6 +325,7 @@ footer {
     padding: 1rem;
   }
 }
+
 
 
 
